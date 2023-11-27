@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Map"
+    android:background="@drawable/map">
+
+    <Button
+        android:id="@+id/friends"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:backgroundTint="#EDE2E2"
+        android:foreground="@drawable/foodpin"
+        android:text="Friends"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pronto"
+        app:rippleColor="#DFD6D6" />
+
+    <Button
+        android:id="@+id/Pronto"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:backgroundTint="#EDE2E2"
+        android:foreground="@drawable/foodpin"
+        android:text="Pronto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#DFD6D6" />
+
+    <Button
+        android:id="@+id/Laroma"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:backgroundTint="#EDE2E2"
+        android:foreground="@drawable/foodpin"
+        android:text="L'aroma"
+        app:layout_constraintStart_toEndOf="@+id/friends"
+        app:layout_constraintTop_toBottomOf="@+id/Pronto"
+        app:rippleColor="#DFD6D6" />
+
+    <Button
+        android:id="@+id/amsaad_C"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="188dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:backgroundTint="#EDE2E2"
+        android:foreground="@drawable/foodpin"
+        android:text="3amsaad(c)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Laroma"
+        app:rippleColor="#DFD6D6" />
+
+    <Button
+        android:id="@+id/Boosters"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:backgroundTint="#EDE2E2"
+        android:foreground="@drawable/foodpin"
+        android:text="Booster's"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amsaad_C"
+        app:rippleColor="#DFD6D6" />
+
+    <Button
+        android:id="@+id/Simply"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="200dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:backgroundTint="#EDE2E2"
+        android:foreground="@drawable/foodpin"
+        android:text="Simply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amsaad_C"
+        app:rippleColor="#DFD6D6" />
+
+    <Button
+        android:id="@+id/Arabiata"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="76dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:backgroundTint="#EDE2E2"
+        android:foreground="@drawable/foodpin"
+        android:text="Arabiata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amsaad_C"
+        app:rippleColor="#DFD6D6" />
+
+    <Button
+        android:id="@+id/amsaad_B"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="76dp"
+        android:background="@drawable/ic_launcher_foreground"
+        android:backgroundTint="#EDE2E2"
+        android:foreground="@drawable/foodpin"
+        android:text="3amsaad(B)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Arabiata"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="#DFD6D6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

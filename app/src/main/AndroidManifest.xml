@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logozoomed"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GucEats"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Checkout"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Buyer.Shop_Arabiata"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Buyer.Shop_AmSaadc"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Buyer.Shop_LaAroma"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Buyer.Shop_Pronto"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Seller.AmSaadb"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Seller.Arabiata"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Seller.AmSaadc"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Seller.LaAroma"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Seller.Pronto"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Seller.EditProduct"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Buyer.Shop_friends"
+            android:exported="false" />
+        <activity
+            android:name=".Shops_Seller.Friends"
+            android:exported="false" />
+        <activity
+            android:name=".shop"
+            android:exported="false" />
+        <activity
+            android:name=".PersonalProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Map"
+            android:exported="true" />
+        <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
+            android:name=".LoginOrRegister.Register"
+            android:exported="true" />
+        <activity
+            android:name=".LoginOrRegister.Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

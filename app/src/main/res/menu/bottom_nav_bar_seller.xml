@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeseller"
+        android:icon="@drawable/baseline_home_24"
+        android:title="home"
+        android:checkable="false"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:visible="true" />
+    <item
+        android:id="@+id/menuseller"
+        android:checkable="false"
+        android:icon="@drawable/baseline_menu_book_24"
+        android:orderInCategory="2"
+        android:title="menu"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/additem"
+        android:checkable="false"
+        android:icon="@android:drawable/ic_menu_add"
+        android:orderInCategory="3"
+        android:title="Add"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+</menu>

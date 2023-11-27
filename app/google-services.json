@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "345584591114",
+    "firebase_url": "https://guceats-836ef-default-rtdb.firebaseio.com",
+    "project_id": "guceats-836ef",
+    "storage_bucket": "guceats-836ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345584591114:android:bfb94b6dd4950fc9991af3",
+        "android_client_info": {
+          "package_name": "com.example.guceats"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByP5QiakzgEkZgowqtnQ0YLU5mltX-2ko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
