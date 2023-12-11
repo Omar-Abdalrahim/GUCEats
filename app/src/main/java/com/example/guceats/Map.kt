@@ -50,6 +50,7 @@ class Map : AppCompatActivity() {
         simply.setOnClickListener(buttonClickListener)
         arabiata.setOnClickListener(buttonClickListener)
         amsaadb.setOnClickListener(buttonClickListener)
+
         val buttonLongClickListener = View.OnLongClickListener { view ->
             when(view.id){
                 friend.id->{

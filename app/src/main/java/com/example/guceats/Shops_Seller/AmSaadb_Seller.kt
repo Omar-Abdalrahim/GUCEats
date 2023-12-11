@@ -1,30 +1,23 @@
 package com.example.guceats.Shops_Seller
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.get
-import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.guceats.R
 import com.example.guceats.products.ItemsAdaptor
 import com.example.guceats.products.Product
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import java.util.*
 
 private var items = ArrayList<Product?>()
 private var RDb = Firebase.database
-private var userdbref = RDb.getReference("Users")
-private var f=false
 private var shopdbref = RDb.getReference("Restaurants")
 class AmSaadb_Seller : Fragment() {
 
@@ -63,10 +56,5 @@ class AmSaadb_Seller : Fragment() {
 
         })
 
-    }
-
-    private fun sendToDatabase() {
-        var r = shopdbref.child("3amsaad(B)").child("Menu")
-        items.forEach { product -> r.child(product?.name.toString()).setValue(product)  }
     }
 }

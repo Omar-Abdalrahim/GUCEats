@@ -75,66 +75,15 @@ class EditProduct : AppCompatActivity() {
 
                 }.addOnCompleteListener {
                     Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
-                    remove(oldp)
+                    if (oldp.name!=p.name)
+                        remove(oldp)
 
                 }
             }
         }
     }
 
-    private fun leave() {
-        when(s){
-            "Friends"-> {
-                val i = Intent(this, Friends_Seller::class.java)
-                startActivity(i)
-                finish()
 
-            }
-            "Pronto"->{
-                val i = Intent(this, com.example.guceats.Map::class.java)
-                startActivity(i)
-                finish()
-
-            }
-            "L'aroma"-> {
-                val i = Intent(this, com.example.guceats.Map::class.java)
-                startActivity(i)
-                finish()
-
-            }
-            "3amsaad(c)"->{
-                val i = Intent(this, com.example.guceats.Map::class.java)
-                startActivity(i)
-                finish()
-
-            }
-            "Booster's"-> {
-                val i = Intent(this, com.example.guceats.Map::class.java)
-                startActivity(i)
-                finish()
-
-            }
-            "Simply"->{
-                val i = Intent(this, com.example.guceats.Map::class.java)
-                startActivity(i)
-                finish()
-
-            }
-            "Arabiata"-> {
-                val i = Intent(this, com.example.guceats.Map::class.java)
-                startActivity(i)
-                finish()
-
-            }
-            "3amsaad(B)"->{
-                val i = Intent(this, com.example.guceats.Map::class.java)
-                startActivity(i)
-                finish()
-
-            }
-        }
-        println("done")
-    }
 
     private fun remove(p:Product){
         shopdbref.child(s).child("Menu").child(p.name).removeValue()

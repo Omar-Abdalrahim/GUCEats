@@ -44,7 +44,6 @@ class Shop_Arabiata_frag : Fragment() {
         rvprod.layoutManager = GridLayoutManager(view.context, 2, GridLayoutManager.VERTICAL, false)
 
         items = ArrayList<Product?>()
-        //sendToDatabase()
         return view
     }
 
@@ -65,9 +64,4 @@ class Shop_Arabiata_frag : Fragment() {
 
     }
 
-
-    private fun sendToDatabase() {
-        var r = shopdbref.child("Arabiata").child("Menu")
-        items.forEach { product -> r.child(product?.name.toString()).setValue(product)  }
-    }
 }

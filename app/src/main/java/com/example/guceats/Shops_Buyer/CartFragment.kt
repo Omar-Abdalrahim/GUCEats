@@ -29,10 +29,8 @@ import java.util.ArrayList
 class CartFragment : Fragment() {
     private var cartitems = ArrayList<CartItem?>()
     private var RDb = Firebase.database
-    private var userdbref = RDb.getReference("Users")
     private var cartdbref = RDb.getReference("Carts")
-    private var shopdbref = RDb.getReference("Restaurants")
-    private var itemss = ArrayList<Product?>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,7 +47,7 @@ class CartFragment : Fragment() {
                     println(p)
                     cartitems.add(p)
                 }
-                //println("+++++++++++++++")
+
                 val adapter = CartItemAdaptor(cartitems)
                 val rvprod = v.findViewById<View>(R.id.carrec) as RecyclerView
                 rvprod.adapter = adapter
@@ -65,58 +63,30 @@ class CartFragment : Fragment() {
                 cartitems = ArrayList<CartItem?>()
                 v.findViewById<Button>(R.id.buttoncheck).setOnClickListener {
                     val i = Intent(v.context, Checkout::class.java)
+                    i.putExtra("Shop_name",getShop())
                     startActivity(i)
 
                 }
+                println(getShop())
             }
             override fun onCancelled(error: DatabaseError) {
 
             }
 
         })
-
-
-
-
-
-
 
         return v
     }
-   /* private fun getMenu(){
-        shopdbref.child("Friends").child("Menu").addValueEventListener(object: ValueEventListener {
+   private fun getShop(): String {
 
-            override fun onDataChange(snapshot: DataSnapshot) {
-                for (sn in snapshot.children) {
-                    val p = sn.getValue(Product::class.java)
-                    itemss.add(p);
-                }
-                println("menu"+itemss)
-            }
-            override fun onCancelled(error: DatabaseError) {
+       if (context.toString().contains("friends")) return "Friends"
+       if (context.toString().contains("Pronto")) return "Pronto"
+       if (context.toString().contains("ِAmSaadc")) return "3amsaad(c)"
+       if (context.toString().contains("Laaroma")) return "L'aroma"
+       if (context.toString().contains("Arabiata")) return "Arabiata"
+       if (context.toString().contains("ِAmSaadb")) return "3amsaad(b)"
 
-            }
-
-        })
-
-    }*/
-    private fun getCartItems() {
-        val id = Firebase.auth.currentUser?.uid
-        cartdbref.child(id.toString()).addValueEventListener(object: ValueEventListener {
-
-        override fun onDataChange(snapshot: DataSnapshot) {
-            for (sn in snapshot.children) {
-                val p = sn.getValue(CartItem::class.java)
-                println(p)
-                cartitems.add(p)
-            }
-        }
-        override fun onCancelled(error: DatabaseError) {
-
-        }
-
-    })
-
-    }
+       return ""
+   }
 
 }

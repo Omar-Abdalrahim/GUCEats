@@ -99,13 +99,16 @@ class CartItemAdaptor(private val mitems: ArrayList<CartItem?>) :
                 .toString().toDouble()
 
             s = getShop()
+
             val r = storageRef.child("Restaurants").child(s).child(textviewname.text.toString())
             val localfile = File.createTempFile("tmp", "jpg")
             r.getFile(localfile).addOnSuccessListener {
                 val b = BitmapFactory.decodeFile(localfile.absolutePath)
                 image.setImageBitmap(b)
             }
+
             val id = Firebase.auth.currentUser?.uid.toString()
+
             addbtn.setOnClickListener {
                 if (textViewcount.text.toString().toInt() + 1 >= citem!!.product.quantity)
                     Toast.makeText(par.context, "Not Enough Items in Stock", Toast.LENGTH_SHORT)

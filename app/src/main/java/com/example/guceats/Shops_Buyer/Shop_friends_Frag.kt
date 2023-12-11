@@ -44,7 +44,6 @@ class Shop_friends_Frag : Fragment() {
         rvprod.layoutManager = GridLayoutManager(view.context, 2, GridLayoutManager.VERTICAL, false)
 
         items = ArrayList<Product?>()
-        //sendToDatabase()
         return view
     }
 

@@ -20,7 +20,6 @@ class Shop_Arabiata : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop_arabiata)
-        println("+++++++++++++++ASDasd+++++++++++++++++")
         title="Arabiata"
         bottomNav = findViewById(R.id.bottomNavBuyer)
         bottomNav.menu.findItem(R.id.menubuyer).isChecked = true;
