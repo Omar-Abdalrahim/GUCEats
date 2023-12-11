@@ -5,6 +5,7 @@ package com.example.guceats.VoiceOverIP
 
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.AudioManager
 import android.net.rtp.AudioCodec
@@ -23,6 +24,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.example.guceats.Home
 import com.example.guceats.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.net.InetAddress
@@ -127,7 +129,12 @@ class VoIP : AppCompatActivity() {
                     }
 
             }
-            disconnect.setOnClickListener { m_AudioStream.release() }
+            disconnect.setOnClickListener {
+                Toast.makeText(this,"Call Ended",Toast.LENGTH_LONG).show()
+                val i= Intent(this,Home::class.java)
+                startActivity(i)
+                finish()
+                m_AudioStream.release() }
         } catch (e: Exception) {
             Log.e("----------------------", e.toString())
             e.printStackTrace()
